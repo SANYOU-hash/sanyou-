@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacOS 开荒软件安装清单</title>
+    <style>
+        :root {
+            --apple-blue: #0071e3;
+            --apple-bg: #f5f5f7;
+            --card-bg: rgba(255, 255, 255, 0.8);
+        }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif; 
+            padding: 40px 20px; 
+            background-color: var(--apple-bg); 
+            color: #1d1d1f;
+            line-height: 1.5;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        h2 { font-size: 32px; font-weight: 700; text-align: center; margin-bottom: 30px; }
+        
+        .alert { 
+            background-color: #fff4ce; 
+            border-left: 5px solid #ffcc00; 
+            padding: 16px; 
+            margin-bottom: 25px; 
+            border-radius: 8px; 
+            font-size: 14px;
+        }
+
+        table { 
+            width: 100%; 
+            border-collapse: separate; 
+            border-spacing: 0;
+            background: var(--card-bg); 
+            backdrop-filter: blur(10px);
+            border-radius: 16px; 
+            overflow: hidden; 
+            box-shadow: 0 8px 30px rgba(0,0,0,0.05); 
+        }
+        th, td { padding: 18px; text-align: left; border-bottom: 1px solid #f0f0f2; }
+        th { background-color: rgba(245, 245, 247, 0.6); color: #86868b; text-transform: uppercase; font-size: 11px; letter-spacing: 0.1em; }
+        
+        tr:last-child td { border-bottom: none; }
+        tr:hover { background-color: rgba(0, 113, 227, 0.02); }
+
+        code { 
+            background: #f0f0f2; 
+            padding: 6px 10px; 
+            border-radius: 6px; 
+            font-family: "SF Mono", Menlo, monospace; 
+            font-size: 13px; 
+            color: #d70022;
+            word-break: break-all;
+        }
+        
+        a { color: var(--apple-blue); text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+
+        .software-name { font-weight: 600; font-size: 15px; color: #1d1d1f; }
+        .tag {
+            font-size: 10px;
+            background: #e8e8ed;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 5px;
+            color: #6e6e73;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>💻 MacOS 开荒必备清单</h2>
+        
+        <div class="alert">
+            <strong>🚀 第一步：</strong> 必须先安装 <b>Homebrew</b>。国内用户建议使用镜像版（会自动配置中科大/清华源）。
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 25%;">软件名称</th>
+                    <th>安装命令 (在终端 Terminal 执行)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="software-name">🍺 Homebrew <span class="tag">核心</span></td>
+                    <td>
+                        <small>官方版：</small><br>
+                        <code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code><br>
+                        <small style="display:block; margin-top:5px;">国内版 (推荐)：</small>
+                        <code>/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="software-name">🐚 Oh My Zsh</td>
+                    <td><code>sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"</code></td>
+                </tr>
+                
+                <tr><td class="software-name">🛠️ Git</td><td><code>brew install git</code></td></tr>
+                <tr><td class="software-name">🟢 Node.js</td><td><code>brew install node</code></td></tr>
+                
+                <tr><td class="software-name">🌐 Arc</td><td><code>brew install --cask arc</code></td></tr>
+                <tr><td class="software-name">🌍 Chrome</td><td><code>brew install --cask google-chrome</code></td></tr>
+                <tr><td class="software-name">🚀 Clash Verge</td><td><code>brew install --cask clash-verge-rev</code></td></tr>
+
+                <tr><td class="software-name">🤐 MacZip</td><td><code>brew install --cask maczip</code></td></tr>
+                <tr><td class="software-name">📲 LocalSend</td><td><code>brew install --cask localsend</code></td></tr>
+                <tr><td class="software-name">⚡ Motrix</td><td><code>brew install --cask motrix</code></td></tr>
+                <tr><td class="software-name">🍸 Bartender</td><td><code>brew install --cask bartender</code></td></tr>
+
+                <tr><td class="software-name">📝 Notion</td><td><code>brew install --cask notion</code></td></tr>
+                <tr><td class="software-name">💎 Obsidian</td><td><code>brew install --cask obsidian</code></td></tr>
+                <tr><td class="software-name">🎬 IINA</td><td><code>brew install --cask iina</code></td></tr>
+                <tr><td class="software-name">📥 Downie</td><td><code>brew install --cask downie</code></td></tr>
+                <tr><td class="software-name">🎵 Spotify</td><td><code>brew install --cask spotify</code></td></tr>
+
+                <tr><td class="software-name">💬 Discord</td><td><code>brew install --cask discord</code></td></tr>
+                <tr><td class="software-name">🎧 TeamSpeak 3</td><td><code>brew install --cask teamspeak-client</code></td></tr>
+                <tr><td class="software-name">🎮 HMCL</td><td><code>brew install --cask hmcl</code> <a href="https://hmcl.huangyuhui.net/" target="_blank">🔗</a></td></tr>
+
+                <tr>
+                    <td class="software-name">🖥️ 终端美化</td>
+                    <td><a href="https://www.youtube.com/watch?v=CF1tMjvHDRA&t=92s" target="_blank">📺 点击查看 YouTube 教程视频</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
